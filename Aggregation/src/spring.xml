@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="a" class="com.hefshine.bean.Address">
+
+<constructor-arg name="city" value="pune"></constructor-arg>
+<constructor-arg name="pin" value="414502"></constructor-arg>
+</bean>
+
+<bean id="p" class="com.hefshine.bean.Person">
+<constructor-arg name="id" value="101"></constructor-arg>
+<constructor-arg name="name" value="smita"></constructor-arg>
+<constructor-arg name="address" ref="a"></constructor-arg>
+</bean>
+</beans>
